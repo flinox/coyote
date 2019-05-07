@@ -6,7 +6,7 @@ FROM golang:alpine
 WORKDIR /go
 
 # When build container
-RUN apk update && apk upgrade && apk add build-base && apk add git && mkdir /go/src/gopath
+RUN apk update && apk upgrade && apk add build-base && apk add git && apk add curl && mkdir /go/src/gopath
 
 # When container start
 #CMD ["go", "run", "main.go"]
@@ -15,5 +15,5 @@ RUN apk update && apk upgrade && apk add build-base && apk add git && mkdir /go/
 
 
 
-# docker build -t flinox/go .
+# docker build -t coyote_connect .
 # docker run -it --rm --hostname go --name go flinox/go

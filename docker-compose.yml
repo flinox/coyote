@@ -18,11 +18,14 @@ services:
     working_dir: /tests
     command: > 
       sh -c "go get -u github.com/landoop/coyote &&
-      cd / &&
-      coyote -c ./tests &&
-      go run go/src/webserver/main.go"
+      coyote -c . &
+      go run /go/src/webserver/main.go"
 
-    
+    # coyote -c ./tests &&
+
+    # Update the build
+    # docker build -t coyote_connect .
+
     # Run a folder of tests
     # coyote -c ./tests
 
