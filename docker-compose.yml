@@ -1,8 +1,8 @@
 version: "2"
 services:
   connect:
-    build: .
-    #image: golang:alpine
+    #build: .
+    image: flinox/kafka_client
     hostname: go
     container_name: go
     ports:
@@ -12,13 +12,12 @@ services:
       - ./webserver:/go/src/webserver
     environment:
       WEBSERVERPORT: "8000"
-      UNIQUE_CD_CONNECT: 1
-      #GOPATH: /go
+      GOPATH: /go
       #PROGRAMA: sample_if.go
     working_dir: /tests
     command: > 
       sh -c "go get -u github.com/landoop/coyote &&
-      coyote -c . &
+      coyote -c . -out kapacitor_teste.html &
       go run /go/src/webserver/main.go"
 
     # coyote -c ./tests &&
