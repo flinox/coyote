@@ -4,7 +4,6 @@ Coyote is a test agent. It uses a yml configuration file with commands to setup 
 
 <a href="https://github.com/Landoop/coyote" target="_blank">Landoop Coyote</a>
 
-
 ## Escrever o teste
 
 Criar um arquivo .yaml com o conteúdo e os comandos para o teste, você pode criar blocos de teste como o exemplo abaixo:
@@ -56,3 +55,9 @@ Onde -out kapacitor_teste.html é o arquivo de saída, se não for informado ele
 ## Visualizar os resultados dos testes
 
 Para visualizar os resultados, acesse http://localhost:8000/kapacitor_teste.html
+
+### Contact
+
+Please if you have any suggestions or corrections, let me know ! I don't know everything, and really i'm learning it too, so... i hope it help anyone who are learning like me !!
+
+Contact email: <fernandolinox@gmail.com> or on [Linkedin Flinox](https://www.linkedin.com/in/flinox/)
