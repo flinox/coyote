@@ -1,8 +1,8 @@
 version: "2"
 services:
   connect:
-    #build: .
-    image: flinox/kafka_client
+    build: .
+    #image: flinox/kafka_client
     hostname: go
     container_name: go
     ports:
@@ -13,7 +13,6 @@ services:
     environment:
       WEBSERVERPORT: "8000"
       GOPATH: /go
-      #PROGRAMA: sample_if.go
     working_dir: /tests
     command: > 
       sh -c "go get -u github.com/landoop/coyote &&
@@ -21,9 +20,6 @@ services:
       go run /go/src/webserver/main.go"
 
     # coyote -c ./tests &&
-
-    # Update the build
-    # docker build -t coyote_connect .
 
     # Run a folder of tests
     # coyote -c ./tests
